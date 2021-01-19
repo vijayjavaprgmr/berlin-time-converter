@@ -35,4 +35,12 @@ public class BerlinTimeConverter {
 		return Arrays.asList(berlinTime.split(":")).stream().mapToInt(Integer::parseInt).toArray();
 	}
 
+	public String getBottomHours(String berlinTime) {
+		StringBuilder outBottomHours = new StringBuilder();
+		int[] berlinTimeExtract = getTimeExtract(berlinTime);
+		int onSigns = berlinTimeExtract[0] % 5;
+		outBottomHours.append(getOnOff(4, onSigns, "R"));
+		return outBottomHours.toString();
+	}
+
 }

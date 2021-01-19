@@ -50,4 +50,9 @@ public class BerlinTimeConverterTest {
 		assertThat(berlinTimeConverter.getTopMinutes("12:35:00"), is("YYRYYRYOOOO"));
 	}
 
+	@Test
+	public void testBottomHoursShouldReturnRowAs_OOOO() {
+		assertThat(berlinTimeConverter.getBottomHours("00:00:00"), is("OOOO"));
+	}
+
 }
