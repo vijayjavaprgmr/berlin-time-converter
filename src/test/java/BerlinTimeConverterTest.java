@@ -55,4 +55,9 @@ public class BerlinTimeConverterTest {
 		assertThat(berlinTimeConverter.getBottomHours("00:00:00"), is("OOOO"));
 	}
 
+	@Test
+	public void testBottomHoursShouldReturnRowAs_RRRO() {
+		assertThat(berlinTimeConverter.getBottomHours("23:59:59"), is("RRRO"));
+	}
+
 }
