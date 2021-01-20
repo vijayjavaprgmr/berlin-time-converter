@@ -85,4 +85,9 @@ public class BerlinTimeConverterTest {
 		assertThat(berlinTimeConverter.getTopHours("08:23:00"), is("ROOO"));
 	}
 
+	@Test
+	public void testTopHoursShouldReturnRowAs_RRRO() {
+		assertThat(berlinTimeConverter.getTopHours("16:35:00"), is("RRRO"));
+	}
+
 }
