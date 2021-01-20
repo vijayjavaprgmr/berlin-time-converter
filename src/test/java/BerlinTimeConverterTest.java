@@ -115,4 +115,9 @@ public class BerlinTimeConverterTest {
 		assertThat(berlinTimeConverter.getBerlinClock("16:50:06"), is("YRRROROOOYYRYYRYYRYOOOOO"));
 	}
 
+	@Test
+	public void testEntireBerlinClockShouldReturnRowAs_ORROOROOOYYRYYRYOOOOYYOO() {
+		assertThat(berlinTimeConverter.getBerlinClock("11:37:01"), is("ORROOROOOYYRYYRYOOOOYYOO"));
+	}
+
 }
