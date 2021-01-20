@@ -95,4 +95,9 @@ public class BerlinTimeConverterTest {
 		assertThat(berlinTimeConverter.getSeconds("00:00:00"), is("Y"));
 	}
 
+	@Test
+	public void testTopLampShouldBlinkOffEveryOddSeconds() {
+		assertThat(berlinTimeConverter.getSeconds("23:59:59"), is("O"));
+	}
+
 }
