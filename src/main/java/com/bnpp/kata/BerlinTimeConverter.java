@@ -57,4 +57,12 @@ public class BerlinTimeConverter {
 		return onOffSigns == 0 ? "Y" : "O";
 	}
 
+	public String getBerlinClock(String berlinTime) {
+		StringBuilder outBerlinkClock = new StringBuilder();
+		outBerlinkClock.append(getSeconds(berlinTime)).append(getTopHours(berlinTime))
+				.append(getBottomHours(berlinTime)).append(getTopMinutes(berlinTime))
+				.append(getBottomMinutes(berlinTime));
+		return outBerlinkClock.toString();
+	}
+
 }
