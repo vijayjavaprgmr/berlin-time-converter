@@ -43,4 +43,12 @@ public class BerlinTimeConverter {
 		return outBottomHours.toString();
 	}
 
+	public String getTopHours(String berlinTime) {
+		StringBuilder outTopHours = new StringBuilder();
+		int[] berlinTimeExtract = getTimeExtract(berlinTime);
+		int onSigns = (berlinTimeExtract[0] - (berlinTimeExtract[0] % 5)) / 5;
+		outTopHours.append(getOnOff(4, onSigns, "R"));
+		return outTopHours.toString();
+	}
+
 }
