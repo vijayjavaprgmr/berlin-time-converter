@@ -51,4 +51,10 @@ public class BerlinTimeConverter {
 		return outTopHours.toString();
 	}
 
+	public String getSeconds(String berlinTime) {
+		int[] berlinTimeExtract = getTimeExtract(berlinTime);
+		int onOffSigns = berlinTimeExtract[2] % 2;
+		return onOffSigns == 0 ? "Y" : "O";
+	}
+
 }

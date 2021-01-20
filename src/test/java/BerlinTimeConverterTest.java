@@ -90,4 +90,9 @@ public class BerlinTimeConverterTest {
 		assertThat(berlinTimeConverter.getTopHours("16:35:00"), is("RRRO"));
 	}
 
+	@Test
+	public void testTopLampShouldBlinkOnEveryEvenSeconds() {
+		assertThat(berlinTimeConverter.getSeconds("00:00:00"), is("Y"));
+	}
+
 }
